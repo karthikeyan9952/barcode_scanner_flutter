@@ -44,15 +44,16 @@ class _MainScreenState extends State<MainScreen> {
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             Container(
+              constraints: BoxConstraints(minHeight: 108),
               alignment: Alignment.center,
               margin: const EdgeInsets.all(12),
-              height: 108,
+              padding: EdgeInsets.all(12),
               decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(color: primary)),
-              child:
-                  Text(barcode.barcodeScanRes, style: const TextStyle(fontSize: 16)),
+              child: SelectableText(barcode.barcodeScanRes,
+                  style: const TextStyle(fontSize: 16)),
             )
           ],
         )),
